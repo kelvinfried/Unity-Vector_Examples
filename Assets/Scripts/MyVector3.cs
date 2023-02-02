@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Vector_Manipulation
+{
     //Inheritance from Monobehaviour class removed.
 public class MyVector3
 {
@@ -106,4 +108,5 @@ public class MyVector3
         return myvector3_vector;
 
     }
+}
 }
