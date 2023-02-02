@@ -116,11 +116,10 @@ public class MyVector3_Unity : MonoBehaviour
             //Apply Transformation to the base GameObject
                 //Add translation onto base
             myvector_translation_vector= MyVector3.Addition(self_GameObject_myvector, myvector_translation_vector );
-                Debug.Log("The result of the addition is: " + myvector_translation_vector.Output_MyVector3());
-
+                //Debug.Log("The result of the addition is: " + myvector_translation_vector.Output_MyVector3());
                 //Convert
             unity_translation_vector= myvector_translation_vector.MyVector3_To_Unity_Vector3();
-                Debug.Log("The translation vector is " +unity_translation_vector );
+                Debug.Log("The result of the addition with the base is " +unity_translation_vector );
 
             this.transform.position= new Vector3(unity_translation_vector.x, unity_translation_vector.y, unity_translation_vector.z );
             //this.transform.position = this.transform.position + unity_translation_vector;
