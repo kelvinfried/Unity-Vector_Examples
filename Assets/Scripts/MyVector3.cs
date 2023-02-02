@@ -128,7 +128,7 @@ namespace Vector_Manipulation
                 string y_value = this.y.ToString();
                 string z_value = this.z.ToString();
 
-            output_statement = "You Vector is: " + x_value + ", " + y_value + ", " + z_value;
+            output_statement = "Vector is: " + x_value + ", " + y_value + ", " + z_value;
             return output_statement;
         }
 
@@ -141,7 +141,7 @@ namespace Vector_Manipulation
                 string y_value= vector.y.ToString();
                 string z_value= vector.z.ToString();
 
-            output_statement= "You Vector is: " +x_value +", " +y_value +", " +z_value;
+            output_statement= "Vector is: " +x_value +", " +y_value +", " +z_value;
                 return output_statement;
         }
     }
