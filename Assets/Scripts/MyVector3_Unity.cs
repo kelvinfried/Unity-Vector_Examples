@@ -92,7 +92,7 @@ public class MyVector3_Unity : MonoBehaviour
             //Keypress
         if(Input.GetKeyDown("space" ) )
         {
-            Debug.Log("" );
+            Debug.Log("-----------------------------" );
             Debug.Log("" );
 
                 //Update vectors
@@ -104,23 +104,24 @@ public class MyVector3_Unity : MonoBehaviour
             self_GameObject_myvector = self_GameObject_myvector.Unity_Vector3_To_MyVector3(self_GameObject_unity_vector );
             target_GameObject_myvector= target_GameObject_myvector.Unity_Vector3_To_MyVector3(target_GameObject_unity_vector );
                     //Checking the vectors assigned are correct:
-                Debug.Log("The chaser's vector is " +self_GameObject_myvector.Output_MyVector3());
+                Debug.Log("The chaser's vector is " +self_GameObject_myvector.Output_MyVector3() );
 
-                Debug.Log("The target's vector is " +target_GameObject_myvector.Output_MyVector3());
+                Debug.Log("The target's vector is " +target_GameObject_myvector.Output_MyVector3() );
 
 
             //Subtract Vectors to get the "Direction (Target- Base)
             myvector_translation_vector = MyVector3.Subtraction(target_GameObject_myvector, self_GameObject_myvector );
+                Debug.Log("The result of the subtraction is: " +myvector_translation_vector.Output_MyVector3() );
 
             //Apply Transformation to the base GameObject
-                //Add translation onto base
-            myvector_translation_vector= MyVector3.Addition(self_GameObject_myvector, myvector_translation_vector );
+            //Add translation onto base
+            /*myvector_translation_vector = MyVector3.Addition(self_GameObject_myvector, myvector_translation_vector );
                 //Convert
             unity_translation_vector= myvector_translation_vector.MyVector3_To_Unity_Vector3();
 
             Debug.Log("The translation vector is " +unity_translation_vector );
 
-            this.transform.position= this.transform.position + unity_translation_vector;
+            this.transform.position= this.transform.position + unity_translation_vector;*/
 
         }
     }
