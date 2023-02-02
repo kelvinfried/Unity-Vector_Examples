@@ -87,7 +87,7 @@ public class MyVector3
     public Vector3 MyVector3_To_Unity_Vector(MyVector3 vector_to_convert )
     {
         Vector3 unity_vector;
-            //passes the x, y and z values across.
+            //passes the x, y and z values across via the constructor (overloaded).
         unity_vector= new Vector3(vector_to_convert.x, vector_to_convert.y, vector_to_convert.z );
 
         return unity_vector;
