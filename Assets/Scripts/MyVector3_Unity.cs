@@ -92,7 +92,7 @@ public class MyVector3_Unity : MonoBehaviour
             //Keypress
         if(Input.GetKeyDown("space" ) )
         {
-            Debug.Log("-----------------------------" );
+            Debug.Log("----------------------------------------------------------------------------------------------------------------------------------------" );
             Debug.Log("" );
 
                 //Update vectors
@@ -114,7 +114,10 @@ public class MyVector3_Unity : MonoBehaviour
                 Debug.Log("The result of the subtraction is: " +myvector_translation_vector.Output_MyVector3() );
 
             //Apply Transformation to the base GameObject
-            //Add translation onto base
+                //Add translation onto base
+            myvector_translation_vector= MyVector3.Addition(self_GameObject_myvector, myvector_translation_vector );
+                Debug.Log("The result of the addition is: " + myvector_translation_vector.Output_MyVector3());
+
             /*myvector_translation_vector = MyVector3.Addition(self_GameObject_myvector, myvector_translation_vector );
                 //Convert
             unity_translation_vector= myvector_translation_vector.MyVector3_To_Unity_Vector3();
