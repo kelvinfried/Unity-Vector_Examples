@@ -61,6 +61,7 @@ public class MyVector3
     }
 
 
+
         //Functions
         //Vector Magnitude.
     public float Magnitude()
@@ -83,8 +84,9 @@ public class MyVector3
         return vector_magnitude;
     }
 
+
         //MyVector3 to a Unity's Vector3
-    public Vector3 MyVector3_To_Unity_Vector(MyVector3 vector_to_convert )
+    public Vector3 MyVector3_To_Unity_Vector3(MyVector3 vector_to_convert )
     {
         Vector3 unity_vector;
             //passes the x, y and z values across.
@@ -93,4 +95,15 @@ public class MyVector3
         return unity_vector;
     }
 
+
+        //Unity's Vector3 to a MyVector3
+    public MyVector3 Unity_Vector3_To_MyVector3(Vector3 vector_to_convert )
+    {
+        MyVector3 myvector3_vector;
+            //passes the x, y and z values across
+        myvector3_vector= new MyVector3(vector_to_convert.x, vector_to_convert.y, vector_to_convert.z );
+
+        return myvector3_vector;
+
+    }
 }
