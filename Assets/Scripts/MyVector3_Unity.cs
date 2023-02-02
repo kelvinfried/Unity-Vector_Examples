@@ -41,7 +41,7 @@ public class MyVector3_Unity : MonoBehaviour
             //If the target gameobject is not defined, use the slower GameObject.find to assign it.
         if(target_GameObject== null )
         {
-            Debug.Log("No game object, assigning manually." );
+            //Debug.Log("No game object, assigning manually." );
 
                 //Get player by their name and assign a referance to their GameObject.
             string target_GameObject_name= "Player";
@@ -69,16 +69,16 @@ public class MyVector3_Unity : MonoBehaviour
 
             //Checking the vectors assigned are correct:
                 //For the chasing GameObject
-            Debug.Log("The chasers starting myvector is: " +self_GameObject_myvector.Output_MyVector3() );
-            Debug.Log("The chasers starting vector3 is: " +self_GameObject_unity_vector );   
-                Debug.Log("");
-                Debug.Log("");
+            //Debug.Log("The chasers starting myvector is: " +self_GameObject_myvector.Output_MyVector3() );
+            //Debug.Log("The chasers starting vector3 is: " +self_GameObject_unity_vector );   
+                //Debug.Log("");
+                //Debug.Log("");
             
              //For the target GameObject
-            Debug.Log("The target's myvector is: " +target_GameObject_myvector.Output_MyVector3() );
-            Debug.Log("The target's vector3 is: " +target_GameObject_unity_vector );
-                Debug.Log("");
-                Debug.Log("");
+            //Debug.Log("The target's myvector is: " +target_GameObject_myvector.Output_MyVector3() );
+            //Debug.Log("The target's vector3 is: " +target_GameObject_unity_vector );
+                //Debug.Log("");
+                //Debug.Log("");
 
     }
 
@@ -93,7 +93,7 @@ public class MyVector3_Unity : MonoBehaviour
         if(Input.GetKeyDown("space" ) )
         {
             Debug.Log("----------------------------------------------------------------------------------------------------------------------------------------" );
-            Debug.Log("" );
+            //Debug.Log("" );
 
                 //Update vectors
                     //Get Unity Vectors
@@ -118,13 +118,12 @@ public class MyVector3_Unity : MonoBehaviour
             myvector_translation_vector= MyVector3.Addition(self_GameObject_myvector, myvector_translation_vector );
                 Debug.Log("The result of the addition is: " + myvector_translation_vector.Output_MyVector3());
 
-            /*myvector_translation_vector = MyVector3.Addition(self_GameObject_myvector, myvector_translation_vector );
                 //Convert
             unity_translation_vector= myvector_translation_vector.MyVector3_To_Unity_Vector3();
+                Debug.Log("The translation vector is " +unity_translation_vector );
 
-            Debug.Log("The translation vector is " +unity_translation_vector );
-
-            this.transform.position= this.transform.position + unity_translation_vector;*/
+            this.transform.position= new Vector3(unity_translation_vector.x, unity_translation_vector.y, unity_translation_vector.z );
+            //this.transform.position = this.transform.position + unity_translation_vector;
 
         }
     }
