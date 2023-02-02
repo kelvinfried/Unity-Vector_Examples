@@ -51,7 +51,7 @@ public class MyVector3_Unity : MonoBehaviour
 
         else
         {
-            Debug.Log("No need to assign.");
+            //Debug.Log("No need to assign.");
         }
         
 
@@ -69,11 +69,16 @@ public class MyVector3_Unity : MonoBehaviour
 
             //Checking the vectors assigned are correct:
                 //For the chasing GameObject
-            Debug.Log( self_GameObject_myvector.Output_MyVector3() );
-
+            Debug.Log("The chasers starting myvector is: " +self_GameObject_myvector.Output_MyVector3() );
+            Debug.Log("The chasers starting vector3 is: " +self_GameObject_unity_vector );   
+                Debug.Log("");
+                Debug.Log("");
+            
              //For the target GameObject
-            Debug.Log(target_GameObject_myvector.Output_MyVector3() );
-
+            Debug.Log("The target's myvector is: " +target_GameObject_myvector.Output_MyVector3() );
+            Debug.Log("The target's vector3 is: " +target_GameObject_unity_vector );
+                Debug.Log("");
+                Debug.Log("");
 
     }
 
@@ -82,12 +87,13 @@ public class MyVector3_Unity : MonoBehaviour
     void Update()
     {
             //To ensure it works apply changes to it.
-        target_GameObject.transform.Rotate(100* Time.deltaTime, 0, 0 );
+        //target_GameObject.transform.Rotate(100* Time.deltaTime, 0, 0 );
 
             //Keypress
         if(Input.GetKeyDown("space" ) )
         {
-            Debug.Log("Movement Stuff" );
+            Debug.Log("" );
+            Debug.Log("" );
 
                 //Update vectors
                     //Get Unity Vectors

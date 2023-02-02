@@ -24,7 +24,7 @@ namespace Vector_Manipulation
         //Functions
             //Static Functions:
             //Vector Addition Function.
-        public static MyVector3 Addition(MyVector3 starting_vector, MyVector3 offset_vector )
+        public static MyVector3 Addition(MyVector3 base_vector, MyVector3 offset_vector )
         {
                 //Used to store the answers
             float x;
@@ -32,9 +32,9 @@ namespace Vector_Manipulation
             float z; 
         
                 //Add each vector's axis value and store it.
-            x= starting_vector.x+ offset_vector.x;
-            y= starting_vector.y+ offset_vector.y;
-            z= starting_vector.z+ offset_vector.z;
+            x= base_vector.x+ offset_vector.x;
+            y= base_vector.y+ offset_vector.y;
+            z= base_vector.z+ offset_vector.z;
 
                 //Initialise a new vector with the values from the addition.
             MyVector3 answer_vector= new MyVector3(x, y, z );
@@ -44,7 +44,7 @@ namespace Vector_Manipulation
 
 
             //Vector Subtraction Function.
-        public static MyVector3 Subtraction(MyVector3 starting_vector, MyVector3 offset_vector)
+        public static MyVector3 Subtraction(MyVector3 base_vector, MyVector3 offset_vector)
         {
                 //Used to store the answers
             float x;
@@ -52,9 +52,9 @@ namespace Vector_Manipulation
             float z;
 
                 //Add each vector's axis value and store it.
-            x = starting_vector.x - offset_vector.x;
-            y = starting_vector.y - offset_vector.y;
-            z = starting_vector.z - offset_vector.z;
+            x= base_vector.x- offset_vector.x;
+            y= base_vector.y- offset_vector.y;
+            z= base_vector.z- offset_vector.z;
 
                 //Initialise a new vector with the values from the addition.
             MyVector3 answer_vector = new MyVector3(x, y, z);
