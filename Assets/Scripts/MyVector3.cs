@@ -108,5 +108,32 @@ public class MyVector3
         return myvector3_vector;
 
     }
+
+
+        // Used to return a string to pass to be outputted to show the vector's value.
+    public string Output_MyVector3()
+    {
+        string output_statement;
+        //Use Unity Function to convert floating points to string
+            string x_value = this.x.ToString();
+            string y_value = this.y.ToString();
+            string z_value = this.z.ToString();
+
+        output_statement = "You Vector is: " + x_value + ", " + y_value + ", " + z_value;
+        return output_statement;
+    }
+
+        //Overloaded
+    public string Output_MyVector3(MyVector3 vector )
+    {
+        string output_statement;
+            //Use Unity Function to convert floating points to string
+            string x_value= vector.x.ToString();
+            string y_value= vector.y.ToString();
+            string z_value= vector.z.ToString();
+
+        output_statement= "You Vector is: " +x_value +", " +y_value +", " +z_value;
+            return output_statement;
+    }
 }
 }

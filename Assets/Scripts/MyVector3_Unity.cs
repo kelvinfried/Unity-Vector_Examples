@@ -47,12 +47,18 @@ public class MyVector3_Unity : MonoBehaviour
             //self_GameObject_myvector= Unity_Vector3_To_MyVector3(self_GameObject_unity_vector );
             //I need to call these functions with an instantiated class
 
-        //For the target GameObject
+            //For the target GameObject
         target_GameObject_unity_vector = target_GameObject.transform.position;
         target_GameObject_myvector = target_GameObject_myvector.Unity_Vector3_To_MyVector3(target_GameObject_unity_vector);
             //target_GameObject_myvector= Unity_Vector3_To_MyVector3(target_GameObject_unity_vector );
 
 
+        //Checking the vectors assigned are correct:
+            //For the chasing GameObject
+        Debug.Log( self_GameObject_myvector.Output_MyVector3() );
+
+         //For the target GameObject
+        Debug.Log(target_GameObject_myvector.Output_MyVector3() );
 
     }
 
