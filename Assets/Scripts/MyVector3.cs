@@ -23,7 +23,8 @@ namespace Vector_Manipulation
 
         //Functions
             //Static Functions:
-            //Vector Addition Function.
+            //Translation:
+                //Vector Addition Function.
         public static MyVector3 Addition(MyVector3 base_vector, MyVector3 offset_vector )
         {
                 //Used to store the answers
@@ -43,7 +44,7 @@ namespace Vector_Manipulation
         }
 
 
-            //Vector Subtraction Function.
+                //Vector Subtraction Function.
         public static MyVector3 Subtraction(MyVector3 base_vector, MyVector3 offset_vector)
         {
                 //Used to store the answers
@@ -63,6 +64,48 @@ namespace Vector_Manipulation
         }
 
 
+            //Scailing:
+                //Vector Multiplication
+        public static MyVector3 Multiplication(MyVector3 base_vector, float scalar )
+        {
+                //Used to store the answers
+            float x;
+            float y;
+            float z;
+
+                //Add each vector's axis value and store it.
+            x= base_vector.x* scalar;
+            y= base_vector.y* scalar;
+            z= base_vector.z* scalar;
+
+                //Initialise a new vector with the values from the addition.
+            MyVector3 answer_vector = new MyVector3(x, y, z);
+
+            return answer_vector;
+        }
+
+
+                //Vector Division
+        public static MyVector3 Division(MyVector3 base_vector, float scalar )
+        {                
+                //Used to store the answers
+            float x;
+            float y;
+            float z;
+
+                //Add each vector's axis value and store it.
+            x= base_vector.x/ scalar;
+            y= base_vector.y/ scalar;
+            z= base_vector.z/ scalar;
+
+                //Initialise a new vector with the values from the addition.
+            MyVector3 answer_vector = new MyVector3(x, y, z);
+
+            return answer_vector;
+        }
+
+
+            //Retuuns the Magnitude of the passed in vector prior to being square rooted.
         public static float Magnitude_Squared_Form(MyVector3 vector )
         {
                   //Stores the answers
