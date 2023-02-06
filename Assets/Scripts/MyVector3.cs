@@ -121,7 +121,65 @@ namespace Vector_Manipulation
             vector_magnitude= x_value* x_value + y_value* y_value+ z_value* z_value;
 
             return vector_magnitude;
+        }
 
+
+            //Vector Magnitude
+        public static float Magnitude(MyVector3 vector )
+        {
+                 //Stores the answers
+            float vector_magnitude= 0.0f;
+
+                //Creates workable copies of the 
+            float x_value= vector.x;
+            float y_value= vector.y; 
+            float z_value= vector.z;
+
+                //Apply pythagoras therom on a 3D Shape
+                    //Get the Square of each component to get the squared value of the magnitude.
+            vector_magnitude= x_value* x_value + y_value* y_value+ z_value* z_value;
+            
+                    //Square root the value to the magnitude.
+            vector_magnitude= Mathf.Sqrt(vector_magnitude );
+
+            return vector_magnitude;
+        }
+
+
+            //Vector Normalised
+        public static MyVector3 Normalised(MyVector3 vector )
+        {
+                //Calculate the magnitude but keep the result in its square form.
+            float magnitude_squared_form_value= Magnitude_Squared_Form(vector );
+
+                //Divide the vector by the squared form.
+            vector= Division(vector, magnitude_squared_form_value );
+
+                //Square root the result.
+            float x= Mathf.Sqrt(vector.x );
+            float y= Mathf.Sqrt(vector.y );
+            float z= Mathf.Sqrt(vector.z );
+
+            normalised_vector= new MyVector3(x, y, z );
+
+                //Check to see the value (ensure it is near 1 ).
+            Output_MyVector3(normalised_vector );
+
+            return normalised_vector;
+        }
+
+
+            //Vector Dot Products
+        public static float Dot_Product(MyVector3 base_vector, MyVector3 target_vector )
+        {
+            float dot_product= 0.0f;
+                //Normalise the vectors
+            float base_vector_normalised= Normalise(base_vector );
+            float target_vector_normalised= Normalise(target_vector );
+
+                //
+
+            return dot_product;
         }
 
 
