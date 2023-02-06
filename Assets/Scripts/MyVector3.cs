@@ -172,12 +172,18 @@ namespace Vector_Manipulation
             //Vector Dot Products
         public static float Dot_Product(MyVector3 base_vector, MyVector3 target_vector )
         {
+            MyVector3 storing_vector= new MyVector3(0, 0, 0 );
             float dot_product= 0.0f;
-                //Normalise the vectors
-            float base_vector_normalised= Normalise(base_vector );
-            float target_vector_normalised= Normalise(target_vector );
 
-                //
+                //Normalise the vectors
+            base_vector= Normalise(base_vector );
+            target_vector= Normalise(target_vector );
+
+                //Add the two vectors
+            storing_vector= Addition(base_vector, target_vector );
+
+                //Add the resulting Vector components
+            dot_product= storing_vector.x + storing_vector.y + storing_vector.z;
 
             return dot_product;
         }
