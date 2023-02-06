@@ -147,7 +147,7 @@ namespace Vector_Manipulation
 
 
             //Vector Normalised
-        public static MyVector3 Normalised(MyVector3 vector )
+        public static MyVector3 Normalise(MyVector3 vector )
         {
                 //Calculate the magnitude but keep the result in its square form.
             float magnitude_squared_form_value= Magnitude_Squared_Form(vector );
@@ -160,10 +160,10 @@ namespace Vector_Manipulation
             float y= Mathf.Sqrt(vector.y );
             float z= Mathf.Sqrt(vector.z );
 
-            normalised_vector= new MyVector3(x, y, z );
+           MyVector3 normalised_vector= new MyVector3(x, y, z );
 
                 //Check to see the value (ensure it is near 1 ).
-            Output_MyVector3(normalised_vector );
+            normalised_vector.Output_MyVector3( );
 
             return normalised_vector;
         }
