@@ -62,7 +62,24 @@ namespace Vector_Manipulation
             return answer_vector;
         }
 
-        
+
+        public static float Magnitude_Squared_Form(MyVector3 vector )
+        {
+                  //Stores the answers
+            float vector_magnitude= 0.0f;
+
+                //Creates workable copies of the 
+            float x_value= vector.x;
+            float y_value= vector.y; 
+            float z_value= vector.z;
+
+                //Apply pythagoras therom on a 3D Shape
+                    //Get the Square of each component to get the squared value of the magnitude.
+            vector_magnitude= x_value* x_value + y_value* y_value+ z_value* z_value;
+
+            return vector_magnitude;
+
+        }
 
 
             //Functions
